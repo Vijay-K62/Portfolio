@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sai Vijay - AWS DevOps Engineer Portfolio. Expert in AWS Cloud, Kubernetes, Terraform, DevSecOps, and CI/CD automation.">
+    <meta name="author" content="Sai Vijay">
+    <title>Sai Vijay | AWS DevOps Engineer Portfolio</title>
+    
+    <!-- Premium Typography (Inter and JetBrains Mono) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Devicon CDN for Developer/DevOps Tool Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    
+    <!-- Leaflet.js CSS for Dark-themed Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Mouse follow glow effect -->
+    <div class="mouse-glow" id="mouse-glow"></div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>SaiVijay<span class="logo-accent">.DevOps /&gt;</span>
+            </a>
+            
+            <nav class="navbar" id="navbar">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#roadmap" class="nav-link">Roadmap</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="Sai_Vijay_Resume.pdf" class="btn btn-sm btn-outline" download>
+                    <i data-lucide="download"></i> Resume
+                </a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <canvas id="cloud-canvas" class="hero-canvas"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="hero-container container">
+            <div class="hero-content">
+                <div class="badge-glow">
+                    <span class="badge-dot"></span> Available for Opportunities
+                </div>
+                <h1 class="hero-title">
+                    Building Scalable Cloud <br>
+                    <span class="text-gradient">Infrastructure Through Automation</span>
+                </h1>
+                <p class="hero-subtitle">
+                    I'm an <span class="typing-text" id="typing-text">AWS DevOps Engineer</span>
+                </p>
+                <p class="hero-description">
+                    AWS DevOps Engineer passionate about building secure, scalable, automated cloud platforms using DevOps best practices and modern cloud-native architectures.
+                </p>
+                
+                <!-- Animated Statistics -->
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-num" data-target="2">0</div>
+                        <div class="stat-label"><i data-lucide="calendar"></i> 2+ Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num" data-target="20">0</div>
+                        <div class="stat-label"><i data-lucide="cpu"></i> 20+ DevOps Tools</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num" data-target="100">0</div>
+                        <div class="stat-label"><i data-lucide="zap"></i> Cloud Automation</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num" data-target="99">0</div>
+                        <div class="stat-label"><i data-lucide="shield-check"></i> CI/CD Expert</div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hero-ctas">
+                    <a href="Sai_Vijay_Resume.pdf" class="btn btn-primary" download>
+                        <i data-lucide="download"></i> Download Resume
+                    </a>
+                    <a href="#projects" class="btn btn-outline">
+                        <i data-lucide="folder-git-2"></i> View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i data-lucide="mail"></i> Contact Me
+                    </a>
+                </div>
+                
+                <!-- Social Icons -->
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/sai-vijay-kathala" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="mailto:Saivijay.kathala@gmail.com" class="social-icon" aria-label="Email">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span class="mouse-wheel"></span>
+            <span class="scroll-text">Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-section section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-pre">Who I Am</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-content-left reveal-left">
+                    <p class="about-lead">
+                        I am an AWS DevOps Engineer with hands-on experience designing cloud infrastructure, automating deployments, implementing CI/CD pipelines, containerizing applications, managing Kubernetes clusters, and building Infrastructure as Code.
+                    </p>
+                    <p class="about-text">
+                        I enjoy solving complex infrastructure challenges and continuously learning new cloud technologies to improve scalability, reliability, and security. My focus is on eliminating manual efforts through end-to-end automation and maintaining robust DevSecOps practices.
+                    </p>
+                    
+                    <div class="about-core-caps">
+                        <h3 class="sub-title">Core Competencies</h3>
+                        <div class="caps-tags">
+                            <span class="tag"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</span>
+                            <span class="tag"><i class="devicon-docker-plain colored"></i> Docker</span>
+                            <span class="tag"><i class="devicon-kubernetes-plain colored"></i> Kubernetes</span>
+                            <span class="tag"><i class="devicon-terraform-plain colored"></i> Terraform</span>
+                            <span class="tag"><i class="devicon-githubactions-plain colored"></i> GitHub Actions</span>
+                            <span class="tag"><i class="devicon-linux-plain colored"></i> Linux Admin</span>
+                            <span class="tag"><i class="devicon-bash-plain colored"></i> Shell Scripting</span>
+                            <span class="tag"><i class="devicon-sonar-plain colored"></i> SonarQube</span>
+                            <span class="tag"><i class="devicon-jfrog-plain-wordmark colored"></i> JFrog Artifactory</span>
+                            <span class="tag"><i class="devicon-prometheus-original colored"></i> Prometheus</span>
+                            <span class="tag"><i class="devicon-grafana-original colored"></i> Grafana</span>
+                            <span class="tag"><i data-lucide="shield-alert"></i> DevSecOps</span>
+                            <span class="tag"><i data-lucide="activity"></i> Monitoring</span>
+                            <span class="tag"><i data-lucide="settings-2"></i> Cloud Architecture</span>
+                            <span class="tag"><i data-lucide="git-branch"></i> Deployment Strategies</span>
+                            <span class="tag"><i data-lucide="wrench"></i> Troubleshooting</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interactive DevOps Terminal Mock -->
+                <div class="about-terminal-container reveal-right">
+                    <div class="terminal-window">
+                        <div class="terminal-bar">
+                            <div class="terminal-buttons">
+                                <span class="dot close"></span>
+                                <span class="dot minimize"></span>
+                                <span class="dot expand"></span>
+                            </div>
+                            <div class="terminal-title">saivijay@devops-node:~</div>
+                        </div>
+                        <div class="terminal-body font-mono">
+                            <p class="terminal-line"><span class="t-accent">saivijay@cloud:~$</span> whoami</p>
+                            <p class="terminal-output text-dim">Sai Vijay - AWS DevOps Engineer</p>
+                            <p class="terminal-line"><span class="t-accent">saivijay@cloud:~$</span> cat info.json</p>
+                            <p class="terminal-output text-cyan">{
+  "role": "AWS DevOps / SRE",
+  "location": "Andhra Pradesh, India",
+  "experience": "2+ Years",
+  "focus": ["Kubernetes", "AWS Infrastructure", "GitOps", "DevSecOps"],
+  "philosophy": "Automate everything that needs to be done twice."
+}</p>
+                            <p class="terminal-line"><span class="t-accent">saivijay@cloud:~$</span> kubectl get nodes</p>
+                            <p class="terminal-output text-green">NAME             STATUS   ROLES    AGE   VERSION
+eks-node-01      Ready    agent    182d  v1.28.2
+eks-node-02      Ready    agent    182d  v1.28.2</p>
+                            <p class="terminal-line"><span class="t-accent">saivijay@cloud:~$</span> terraform plan</p>
+                            <p class="terminal-output text-yellow">Terraform v1.6.0
+Initializing provider plugins...
+No changes. Infrastructure is up-to-date.</p>
+                            <p class="terminal-line"><span class="t-accent">saivijay@cloud:~$</span> <span class="terminal-cursor"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section class="skills-section section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-pre">What I Work With</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Skill Card: Cloud -->
+                <div class="skill-card reveal-up">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-header">
+                        <div class="skill-icon-wrap"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></div>
+                        <h3 class="skill-title">Cloud Infrastructure</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span>AWS EC2 & Auto Scaling</span> <span class="skill-percentage">95%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 95%"></div></li>
+                        
+                        <li><span>VPC Networking & Subnets</span> <span class="skill-percentage">90%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 90%"></div></li>
+                        
+                        <li><span>IAM Security & Roles</span> <span class="skill-percentage">92%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 92%"></div></li>
+                        
+                        <li><span>Amazon EKS & S3 / ECR</span> <span class="skill-percentage">88%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 88%"></div></li>
+                        
+                        <li><span>RDS, ALB & Route53</span> <span class="skill-percentage">85%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card: Containers & Orchestration -->
+                <div class="skill-card reveal-up" style="animation-delay: 0.1s;">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-header">
+                        <div class="skill-icon-wrap"><i class="devicon-kubernetes-plain colored"></i></div>
+                        <h3 class="skill-title">Containers & Orchestration</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span>Docker & Compose</span> <span class="skill-percentage">95%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 95%"></div></li>
+                        
+                        <li><span>Kubernetes (EKS/K8s)</span> <span class="skill-percentage">90%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 90%"></div></li>
+                        
+                        <li><span>Helm Chart Packaging</span> <span class="skill-percentage">85%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></li>
+                        
+                        <li><span>Multi-Stage Docker Builds</span> <span class="skill-percentage">92%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 92%"></div></li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card: Infrastructure as Code -->
+                <div class="skill-card reveal-up" style="animation-delay: 0.2s;">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-header">
+                        <div class="skill-icon-wrap"><i class="devicon-terraform-plain colored"></i></div>
+                        <h3 class="skill-title">Infrastructure as Code</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span>Terraform Modules & State</span> <span class="skill-percentage">92%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 92%"></div></li>
+                        
+                        <li><span>Ansible Automation</span> <span class="skill-percentage">80%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 80%"></div></li>
+                        
+                        <li><span>S3 Backend & Locking</span> <span class="skill-percentage">90%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 90%"></div></li>
+                        
+                        <li><span>Environment Separation</span> <span class="skill-percentage">88%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 88%"></div></li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card: CI/CD & Artifacts -->
+                <div class="skill-card reveal-up">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-header">
+                        <div class="skill-icon-wrap"><i class="devicon-githubactions-plain colored"></i></div>
+                        <h3 class="skill-title">CI/CD & Source Control</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span>GitHub Actions Pipelines</span> <span class="skill-percentage">95%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 95%"></div></li>
+                        
+                        <li><span>Jenkins Pipelines (Groovy)</span> <span class="skill-percentage">82%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 82%"></div></li>
+                        
+                        <li><span>Git & GitHub Workflows</span> <span class="skill-percentage">90%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 90%"></div></li>
+                        
+                        <li><span>JFrog Artifactory & Maven</span> <span class="skill-percentage">85%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card: Security & Scanning (DevSecOps) -->
+                <div class="skill-card reveal-up" style="animation-delay: 0.1s;">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-header">
+                        <div class="skill-icon-wrap"><i class="devicon-sonar-plain colored"></i></div>
+                        <h3 class="skill-title">DevSecOps & Security</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span>SonarQube Code Quality</span> <span class="skill-percentage">88%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 88%"></div></li>
+                        
+                        <li><span>Snyk Vulnerability Scan</span> <span class="skill-percentage">85%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></li>
+                        
+                        <li><span>Trivy Container Scanning</span> <span class="skill-percentage">90%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 90%"></div></li>
+                        
+                        <li><span>AWS IAM Policy Hardening</span> <span class="skill-percentage">92%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 92%"></div></li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card: Monitoring & Logs -->
+                <div class="skill-card reveal-up" style="animation-delay: 0.2s;">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-header">
+                        <div class="skill-icon-wrap"><i class="devicon-prometheus-original colored"></i></div>
+                        <h3 class="skill-title">Monitoring & Operations</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span>Prometheus Metrics Collection</span> <span class="skill-percentage">85%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></li>
+                        
+                        <li><span>Grafana Dashboards & Alerts</span> <span class="skill-percentage">90%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 90%"></div></li>
+                        
+                        <li><span>ELK Stack (Elasticsearch, Logstash, Kibana)</span> <span class="skill-percentage">78%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 78%"></div></li>
+                        
+                        <li><span>AWS CloudWatch Logs & Metrics</span> <span class="skill-percentage">88%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 88%"></div></li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card: Operating Systems & Programming -->
+                <div class="skill-card reveal-up">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-header">
+                        <div class="skill-icon-wrap"><i class="devicon-linux-plain colored"></i></div>
+                        <h3 class="skill-title">OS & Automation Scripting</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span>Linux (Ubuntu / Amazon Linux)</span> <span class="skill-percentage">90%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 90%"></div></li>
+                        
+                        <li><span>Shell Scripting (Bash)</span> <span class="skill-percentage">92%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 92%"></div></li>
+                        
+                        <li><span>Java Build Configurations</span> <span class="skill-percentage">80%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 80%"></div></li>
+                        
+                        <li><span>Python Scripting (Basic)</span> <span class="skill-percentage">70%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 70%"></div></li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card: Network Security -->
+                <div class="skill-card reveal-up" style="animation-delay: 0.1s;">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-header">
+                        <div class="skill-icon-wrap"><i data-lucide="network"></i></div>
+                        <h3 class="skill-title">Networking & Security Groups</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span>TCP/IP, DNS & HTTP/S Routing</span> <span class="skill-percentage">85%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 85%"></div></li>
+                        
+                        <li><span>SSH Keys & Access Management</span> <span class="skill-percentage">92%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 92%"></div></li>
+                        
+                        <li><span>VPC Networking & Peerings</span> <span class="skill-percentage">88%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 88%"></div></li>
+                        
+                        <li><span>ALB Load Balancing</span> <span class="skill-percentage">90%</span></li>
+                        <li class="progress-bar-wrap"><div class="progress-bar" style="width: 90%"></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section class="experience-section section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-pre">My Career Path</span>
+                <h2 class="section-title">Work Experience</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot-glow"></div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jun 2023 - Present</div>
+                    
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="role-title">AWS DevOps Engineer</h3>
+                            <span class="company-badge"><i class="devicon-amazonwebservices-plain colored"></i> AWS & Cloud Architectures</span>
+                        </div>
+                        
+                        <p class="timeline-desc">
+                            Responsible for building robust, scalable cloud infrastructure and implementing DevSecOps principles across client projects.
+                        </p>
+                        
+                        <div class="timeline-tasks">
+                            <h4 class="timeline-tasks-title">Key Responsibilities & Deliverables:</h4>
+                            <ul class="tasks-list">
+                                <li><i data-lucide="check" class="check-icon"></i> Built complex CI/CD pipelines using GitHub Actions and Jenkins for automated application delivery.</li>
+                                <li><i data-lucide="check" class="check-icon"></i> Provisioned and managed AWS infrastructure securely using modular, reusable Terraform code with remote S3 backend state and DynamoDB locks.</li>
+                                <li><i data-lucide="check" class="check-icon"></i> Managed Kubernetes containerized workloads on AWS EKS; packaged software deployments via Helm.</li>
+                                <li><i data-lucide="check" class="check-icon"></i> Hardened continuous integration by integrating DevSecOps scanning tools, including SonarQube for quality, Snyk for dependency issues, and Trivy for container scanning.</li>
+                                <li><i data-lucide="check" class="check-icon"></i> Orchestrated Prometheus metrics and customized Grafana dashboards to alert teams about production outages, substantially reducing MTTR.</li>
+                                <li><i data-lucide="check" class="check-icon"></i> Managed binaries and software dependencies using JFrog Artifactory within Maven build pipelines.</li>
+                                <li><i data-lucide="check" class="check-icon"></i> Handled Linux administration tasks across Ubuntu and Amazon Linux systems, including script automation using Bash.</li>
+                                <li><i data-lucide="check" class="check-icon"></i> Coordinated closely with development teams to troubleshoot production issues and improve build and deploy stability.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-pre">What I've Built</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <!-- Project 1: Pipeline Visualizer -->
+            <div class="project-showcase reveal-up">
+                <div class="project-info-grid">
+                    <div class="project-details">
+                        <span class="project-number">Project 01</span>
+                        <h3 class="project-title">End-to-End DevSecOps CI/CD Pipeline</h3>
+                        <p class="project-description">
+                            A complete, secure pipelines-as-code automation project that enforces high security standards. Whenever a developer pushes changes, security scanning and unit tests execute automatically, artifact files are safely archived, and the cluster configuration is synchronized using GitOps with Terraform and Kubernetes.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">SonarQube</span>
+                            <span class="tech-tag">Snyk</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Trivy</span>
+                            <span class="tech-tag">JFrog</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">AWS EKS</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-visualizer-container">
+                        <div class="visualizer-header">
+                            <div class="visualizer-status">
+                                <span class="status-indicator live"></span> Active DevSecOps Execution Pipeline
+                            </div>
+                        </div>
+                        <div class="pipeline-scroll-wrap">
+                            <div class="pipeline-flow" id="pipeline-flow">
+                                <!-- Developer -->
+                                <div class="pipeline-node" data-stage="0">
+                                    <div class="node-icon"><i data-lucide="user"></i></div>
+                                    <div class="node-name">Developer</div>
+                                </div>
+                                <div class="pipeline-arrow"><i data-lucide="chevron-right"></i></div>
+                                <!-- GitHub -->
+                                <div class="pipeline-node" data-stage="1">
+                                    <div class="node-icon"><i class="devicon-github-original"></i></div>
+                                    <div class="node-name">GitHub</div>
+                                </div>
+                                <div class="pipeline-arrow"><i data-lucide="chevron-right"></i></div>
+                                <!-- GitHub Actions -->
+                                <div class="pipeline-node" data-stage="2">
+                                    <div class="node-icon"><i class="devicon-githubactions-plain"></i></div>
+                                    <div class="node-name">Actions</div>
+                                </div>
+                                <div class="pipeline-arrow"><i data-lucide="chevron-right"></i></div>
+                                <!-- Maven -->
+                                <div class="pipeline-node" data-stage="3">
+                                    <div class="node-icon"><i class="devicon-maven-plain"></i></div>
+                                    <div class="node-name">Maven Build</div>
+                                </div>
+                                <div class="pipeline-arrow"><i data-lucide="chevron-right"></i></div>
+                                <!-- JUnit -->
+                                <div class="pipeline-node" data-stage="4">
+                                    <div class="node-icon"><i data-lucide="test-tube"></i></div>
+                                    <div class="node-name">JUnit</div>
+                                </div>
+                                <div class="pipeline-arrow"><i data-lucide="chevron-right"></i></div>
+                                <!-- SonarQube -->
+                                <div class="pipeline-node" data-stage="5">
+                                    <div class="node-icon"><i class="devicon-sonar-plain"></i></div>
+                                    <div class="node-name">SonarQube</div>
+                                </div>
+                                <div class="pipeline-arrow"><i data-lucide="chevron-right"></i></div>
+                                <!-- Snyk -->
+                                <div class="pipeline-node" data-stage="6">
+                                    <div class="node-icon"><i data-lucide="shield-alert"></i></div>
+                                    <div class="node-name">Snyk Scan</div>
+                                </div>
+                                <div class="pipeline-arrow"><i data-lucide="chevron-right"></i></div>
+                                <!-- Docker Build -->
+                                <div class="pipeline-node" data-stage="7">
+                                    <div class="node-icon"><i class="devicon-docker-plain"></i></div>
+                                    <div class="node-name">Docker Build</div>
+                                </div>
+                                <div class="pipeline-arrow"><i data-lucide="chevron-right"></i></div>
+                                <!-- Trivy Scan -->
+                                <div class="pipeline-node" data-stage="8">
+                                    <div class="node-icon"><i data-lucide="shield"></i></div>
+                                    <div class="node-name">Trivy Scan</div>
+                                </div>
+                                <div class="pipeline-arrow"><i data-lucide="chevron-right"></i></div>
+                                <!-- JFrog -->
+                                <div class="pipeline-node" data-stage="9">
+                                    <div class="node-icon"><i class="devicon-jfrog-plain"></i></div>
+                                    <div class="node-name">JFrog Artifactory</div>
+                                </div>
+                                <div class="pipeline-arrow"><i data-lucide="chevron-right"></i></div>
+                                <!-- Terraform -->
+                                <div class="pipeline-node" data-stage="10">
+                                    <div class="node-icon"><i class="devicon-terraform-plain"></i></div>
+                                    <div class="node-name">Terraform</div>
+                                </div>
+                                <div class="pipeline-arrow"><i data-lucide="chevron-right"></i></div>
+                                <!-- AWS EKS -->
+                                <div class="pipeline-node" data-stage="11">
+                                    <div class="node-icon"><i class="devicon-amazonwebservices-plain"></i></div>
+                                    <div class="node-name">Amazon EKS</div>
+                                </div>
+                                <div class="pipeline-arrow"><i data-lucide="chevron-right"></i></div>
+                                <!-- K8s Deploy -->
+                                <div class="pipeline-node" data-stage="12">
+                                    <div class="node-icon"><i class="devicon-kubernetes-plain"></i></div>
+                                    <div class="node-name">K8s Deploy</div>
+                                </div>
+                                <div class="pipeline-arrow"><i data-lucide="chevron-right"></i></div>
+                                <!-- Prometheus/Grafana -->
+                                <div class="pipeline-node" data-stage="13">
+                                    <div class="node-icon"><i class="devicon-prometheus-original"></i></div>
+                                    <div class="node-name">Monitoring</div>
+                                </div>
+                                <div class="pipeline-arrow"><i data-lucide="chevron-right"></i></div>
+                                <!-- Production -->
+                                <div class="pipeline-node" data-stage="14">
+                                    <div class="node-icon"><i data-lucide="server"></i></div>
+                                    <div class="node-name">Production</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Details on selected node -->
+                        <div class="pipeline-stage-info" id="pipeline-stage-info">
+                            <h4 class="stage-title">Hover over a stage to see execution details...</h4>
+                            <p class="stage-details">This pipeline enforces quality gates and vulnerability checks before updating production workloads.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: AWS Three-Tier Architecture -->
+            <div class="project-showcase reveal-up" style="animation-delay: 0.1s;">
+                <div class="project-info-grid alternate">
+                    <div class="project-details">
+                        <span class="project-number">Project 02</span>
+                        <h3 class="project-title">AWS Three-Tier Web Architecture</h3>
+                        <p class="project-description">
+                            A production-ready infrastructure design utilizing public and private subnets, secure network components, auto-scaling, and active system auditing. Traffic passes through web tiers down to data layers securely, and is completely managed via Infrastructure as Code.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">VPC</span>
+                            <span class="tech-tag">ALB</span>
+                            <span class="tech-tag">EC2 ASG</span>
+                            <span class="tech-tag">Amazon RDS</span>
+                            <span class="tech-tag">NAT Gateway</span>
+                            <span class="tech-tag">IAM Roles</span>
+                            <span class="tech-tag">CloudWatch</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-visualizer-container">
+                        <div class="visualizer-header">
+                            <div class="visualizer-status">Interactive Cloud Architecture (Hover sections to explore)</div>
+                        </div>
+                        <div class="architecture-svg-wrap">
+                            <svg class="architecture-svg" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="gradient-vpc" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.05" />
+                                        <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.1" />
+                                    </linearGradient>
+                                    <linearGradient id="gradient-sub" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#0F172A" stop-opacity="0.8" />
+                                        <stop offset="100%" stop-color="#1E293B" stop-opacity="0.8" />
+                                    </linearGradient>
+                                </defs>
+                                
+                                <!-- Outer VPC boundary -->
+                                <g class="arch-group" data-title="Amazon VPC" data-desc="Virtual Private Cloud: Separates development resources from public internet. Includes 10.0.0.0/16 address space.">
+                                    <rect x="20" y="50" width="760" height="420" rx="15" fill="url(#gradient-vpc)" stroke="#38BDF8" stroke-width="2" stroke-dasharray="8 4" />
+                                    <text x="35" y="75" fill="#38BDF8" font-family="sans-serif" font-weight="bold" font-size="12">Amazon VPC (10.0.0.0/16)</text>
+                                </g>
+                                
+                                <!-- Internet Gateway & NAT -->
+                                <g class="arch-group" data-title="Internet Gateway & NAT" data-desc="IGW routes external user traffic into Public subnets. NAT Gateway allows instances in Private subnets to make outbound updates safely.">
+                                    <!-- Internet Gateway -->
+                                    <rect x="380" y="10" width="40" height="30" rx="5" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5" />
+                                    <text x="400" y="28" fill="#FFF" font-family="sans-serif" font-size="9" text-anchor="middle" font-weight="bold">IGW</text>
+                                    
+                                    <!-- NAT Gateway -->
+                                    <rect x="70" y="150" width="40" height="30" rx="5" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5" />
+                                    <text x="90" y="168" fill="#FFF" font-family="sans-serif" font-size="9" text-anchor="middle" font-weight="bold">NAT</text>
+                                </g>
+                                
+                                <!-- Public Subnet -->
+                                <g class="arch-group" data-title="Public Subnet" data-desc="Houses public-facing resources like the Application Load Balancer and NAT Gateway. Linked to Internet Gateway route tables.">
+                                    <rect x="40" y="100" width="720" height="100" rx="10" fill="url(#gradient-sub)" stroke="#10B981" stroke-width="1" />
+                                    <text x="50" y="120" fill="#10B981" font-family="sans-serif" font-weight="bold" font-size="10">Public Subnet (10.0.1.0/24)</text>
+                                    
+                                    <!-- Application Load Balancer -->
+                                    <g class="arch-node" data-title="Application Load Balancer (ALB)" data-desc="ALB distributes incoming HTTP/HTTPS traffic across instances in Auto Scaling Groups based on traffic metrics.">
+                                        <rect x="370" y="130" width="60" height="40" rx="5" fill="#312E81" stroke="#38BDF8" stroke-width="1.5" />
+                                        <text x="400" y="150" fill="#38BDF8" font-family="sans-serif" font-size="9" text-anchor="middle" font-weight="bold">ALB</text>
+                                        <text x="400" y="162" fill="#94A3B8" font-family="sans-serif" font-size="8" text-anchor="middle">Traffic Dist</text>
+                                    </g>
+                                </g>
+                                
+                                <!-- Private Subnet (Web / App) -->
+                                <g class="arch-group" data-title="Private Subnet (App Tier)" data-desc="Secure subnet housing production EC2 nodes. Denies direct incoming public connections. Accepts traffic only from ALB.">
+                                    <rect x="40" y="220" width="720" height="130" rx="10" fill="url(#gradient-sub)" stroke="#3B82F6" stroke-width="1" />
+                                    <text x="50" y="240" fill="#3B82F6" font-family="sans-serif" font-weight="bold" font-size="10">Private Subnet (10.0.2.0/24) - App Tier</text>
+                                    
+                                    <!-- Auto Scaling Group -->
+                                    <g class="arch-group" data-title="EC2 Auto Scaling Group" data-desc="ASG maintains high availability. Automatically scales EC2 instances out or in depending on CPU utilization thresholds.">
+                                        <rect x="180" y="260" width="440" height="70" rx="8" fill="none" stroke="#EC4899" stroke-width="1.5" stroke-dasharray="4 2" />
+                                        <text x="190" y="275" fill="#EC4899" font-family="sans-serif" font-size="8" font-weight="bold">Auto Scaling Group</text>
+                                        
+                                        <!-- EC2 Instance 1 -->
+                                        <g class="arch-node" data-title="EC2 Instance 1" data-desc="Amazon EC2 Instance: Host node running application server, configured with security groups to accept traffic exclusively from ALB on port 80/443.">
+                                            <rect x="230" y="280" width="90" height="40" rx="5" fill="#1E293B" stroke="#06B6D4" stroke-width="1" />
+                                            <text x="275" y="305" fill="#FFF" font-family="sans-serif" font-size="10" text-anchor="middle">EC2 Instance</text>
+                                        </g>
+                                        
+                                        <!-- EC2 Instance 2 -->
+                                        <g class="arch-node" data-title="EC2 Instance 2" data-desc="Host node replica running in different availability zone for failover support.">
+                                            <rect x="480" y="280" width="90" height="40" rx="5" fill="#1E293B" stroke="#06B6D4" stroke-width="1" />
+                                            <text x="525" y="305" fill="#FFF" font-family="sans-serif" font-size="10" text-anchor="middle">EC2 Instance</text>
+                                        </g>
+                                    </g>
+                                </g>
+                                
+                                <!-- Private Subnet (Data) -->
+                                <g class="arch-group" data-title="Private Subnet (Data Tier)" data-desc="Most protected layer. Restricts all traffic except database connections from App Tier EC2 instances.">
+                                    <rect x="40" y="370" width="720" height="80" rx="10" fill="url(#gradient-sub)" stroke="#EF4444" stroke-width="1" />
+                                    <text x="50" y="390" fill="#EF4444" font-family="sans-serif" font-weight="bold" font-size="10">Private Subnet (10.0.3.0/24) - Database Tier</text>
+                                    
+                                    <!-- Amazon RDS -->
+                                    <g class="arch-node" data-title="Amazon RDS (Relational Database)" data-desc="Amazon RDS Instance: PostgreSQL database engine configured for replication. Uses security group rules limiting access exclusively to App Tier nodes.">
+                                        <rect x="350" y="395" width="100" height="45" rx="5" fill="#1E293B" stroke="#EF4444" stroke-width="1.5" />
+                                        <text x="400" y="415" fill="#EF4444" font-family="sans-serif" font-size="10" text-anchor="middle" font-weight="bold">Amazon RDS</text>
+                                        <text x="400" y="430" fill="#94A3B8" font-family="sans-serif" font-size="8" text-anchor="middle">PostgreSQL Master</text>
+                                    </g>
+                                </g>
+                                
+                                <!-- CloudWatch & IAM side services -->
+                                <g class="arch-node" data-title="Amazon CloudWatch" data-desc="CloudWatch: Collects CPU logs, memory metrics, and web access metrics from EC2 and ALB to trigger autoscaling policies or alert notifications.">
+                                    <rect x="670" y="60" width="80" height="30" rx="4" fill="#3F3F46" stroke="#F59E0B" stroke-width="1" />
+                                    <text x="710" y="78" fill="#F59E0B" font-family="sans-serif" font-size="8" text-anchor="middle" font-weight="bold">CloudWatch</text>
+                                </g>
+                                
+                                <g class="arch-node" data-title="AWS IAM" data-desc="Identity and Access Management: Restricts system permissions using IAM instance profiles and granular policies following the principle of least privilege.">
+                                    <rect x="60" y="60" width="70" height="30" rx="4" fill="#3F3F46" stroke="#D97706" stroke-width="1" />
+                                    <text x="95" y="78" fill="#D97706" font-family="sans-serif" font-size="8" text-anchor="middle" font-weight="bold">AWS IAM</text>
+                                </g>
+                            </svg>
+                        </div>
+                        
+                        <div class="architecture-info-panel" id="architecture-info-panel">
+                            <h4 class="arch-panel-title">AWS Infrastructure Components</h4>
+                            <p class="arch-panel-desc">Hover over any boundary or node in the diagram to inspect its cloud architecture configuration, security settings, and networking roles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Infrastructure as Code -->
+            <div class="project-showcase reveal-up">
+                <div class="project-info-grid">
+                    <div class="project-details">
+                        <span class="project-number">Project 03</span>
+                        <h3 class="project-title">Infrastructure as Code: Modular Terraform</h3>
+                        <p class="project-description">
+                            Rebuildable cloud systems written entirely in HCL. Features modularized resources, environmental isolation (Dev/Prod directories), remote state backend stored in AWS S3, and concurrent apply protection using DynamoDB locks.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Terraform Modules</span>
+                            <span class="tech-tag">S3 Remote State</span>
+                            <span class="tech-tag">DynamoDB Lock</span>
+                            <span class="tech-tag">Multi-Environment</span>
+                            <span class="tech-tag">HCL Best Practices</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-visualizer-container">
+                        <div class="code-editor-mock">
+                            <div class="editor-header">
+                                <div class="editor-dots">
+                                    <span class="dot close"></span>
+                                    <span class="dot minimize"></span>
+                                    <span class="dot expand"></span>
+                                </div>
+                                <div class="editor-tabs">
+                                    <button class="editor-tab active" data-file="main">main.tf</button>
+                                    <button class="editor-tab" data-file="variables">variables.tf</button>
+                                    <button class="editor-tab" data-file="backend">backend.tf</button>
+                                    <button class="editor-tab" data-file="outputs">outputs.tf</button>
+                                </div>
+                            </div>
+                            <div class="editor-body font-mono">
+                                <!-- main.tf -->
+                                <pre class="code-block active" id="code-main"><code><span class="c-comment"># Terraform configuration for EKS Cluster</span>
+module <span class="c-str">"vpc"</span> {
+  source = <span class="c-str">"./modules/vpc"</span>
+  vpc_cidr             = var.vpc_cidr
+  public_subnet_cidrs  = var.public_subnet_cidrs
+  private_subnet_cidrs = var.private_subnet_cidrs
+  environment          = var.environment
+}
+
+module <span class="c-str">"eks"</span> {
+  source = <span class="c-str">"./modules/eks"</span>
+  cluster_name    = <span class="c-str">"${var.environment}-eks-cluster"</span>
+  vpc_id          = module.vpc.vpc_id
+  private_subnets = module.vpc.private_subnet_ids
+  node_groups = {
+    general = {
+      desired_size = 2
+      max_size     = 4
+      min_size     = 1
+      instance_types = [<span class="c-str">"t3.medium"</span>]
+    }
+  }
+}</code></pre>
+                                <!-- variables.tf -->
+                                <pre class="code-block" id="code-variables"><code>variable <span class="c-str">"environment"</span> {
+  type        = string
+  description = <span class="c-str">"Deployment stage name"</span>
+  default     = <span class="c-str">"production"</span>
+}
+
+variable <span class="c-str">"vpc_cidr"</span> {
+  type    = string
+  default = <span class="c-str">"10.0.0.0/16"</span>
+}
+
+variable <span class="c-str">"public_subnet_cidrs"</span> {
+  type    = list(string)
+  default = [<span class="c-str">"10.0.1.0/24"</span>, <span class="c-str">"10.0.2.0/24"</span>]
+}
+
+variable <span class="c-str">"private_subnet_cidrs"</span> {
+  type    = list(string)
+  default = [<span class="c-str">"10.0.3.0/24"</span>, <span class="c-str">"10.0.4.0/24"</span>]
+}</code></pre>
+                                <!-- backend.tf -->
+                                <pre class="code-block" id="code-backend"><code>terraform {
+  required_version = <span class="c-str">">= 1.6.0"</span>
+  
+  backend <span class="c-str">"s3"</span> {
+    bucket         = <span class="c-str">"saivijay-tf-state"</span>
+    key            = <span class="c-str">"state/production.tfstate"</span>
+    region         = <span class="c-str">"ap-south-1"</span>
+    encrypt        = true
+    dynamodb_table = <span class="c-str">"saivijay-tf-lock-table"</span>
+  }
+}</code></pre>
+                                <!-- outputs.tf -->
+                                <pre class="code-block" id="code-outputs"><code>output <span class="c-str">"vpc_id"</span> {
+  value       = module.vpc.vpc_id
+  description = <span class="c-str">"The ID of the generated VPC"</span>
+}
+
+output <span class="c-str">"eks_cluster_endpoint"</span> {
+  value       = module.eks.cluster_endpoint
+  description = <span class="c-str">"Kubernetes control plane API endpoint"</span>
+}
+
+output <span class="c-str">"eks_cluster_name"</span> {
+  value       = module.eks.cluster_name
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DevOps Roadmap & Achievements Section -->
+    <section class="roadmap-section section" id="roadmap">
+        <div class="container">
+            <div class="roadmap-grid">
+                
+                <!-- DevOps Roadmap Path -->
+                <div class="roadmap-path-wrap reveal-left">
+                    <div class="section-header align-left">
+                        <span class="section-pre">My Skills Path</span>
+                        <h2 class="section-title">DevOps Learning Roadmap</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    
+                    <p class="section-desc">
+                        A visual journey of technical mastery. Follow the sequence of core DevOps modules implemented across my career development path:
+                    </p>
+                    
+                    <div class="roadmap-flow">
+                        <div class="roadmap-node completed">
+                            <span class="roadmap-num">1</span>
+                            <div class="roadmap-info">
+                                <h4>Git Version Control</h4>
+                                <p>Repository management, branching strategies, and release tags.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-node completed">
+                            <span class="roadmap-num">2</span>
+                            <div class="roadmap-info">
+                                <h4>Linux OS Fundamentals</h4>
+                                <p>File management, user administration, system tools, and Bash automation.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-node completed">
+                            <span class="roadmap-num">3</span>
+                            <div class="roadmap-info">
+                                <h4>Networking & Security</h4>
+                                <p>DNS, HTTP/S, SSL certificate setups, and secure SSH tunnels.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-node completed">
+                            <span class="roadmap-num">4</span>
+                            <div class="roadmap-info">
+                                <h4>AWS Cloud Services</h4>
+                                <p>Virtual Private Cloud (VPC), EC2 scaling, S3 storage, and IAM roles.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-node completed">
+                            <span class="roadmap-num">5</span>
+                            <div class="roadmap-info">
+                                <h4>Docker Containers</h4>
+                                <p>Dockerfiles, image optimizations, and Docker Compose configurations.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-node completed">
+                            <span class="roadmap-num">6</span>
+                            <div class="roadmap-info">
+                                <h4>Kubernetes Orchestration</h4>
+                                <p>Pods, Services, Ingress routes, ConfigMaps, Secrets, and Helm charts.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-node completed">
+                            <span class="roadmap-num">7</span>
+                            <div class="roadmap-info">
+                                <h4>Terraform (IaC)</h4>
+                                <p>Infrastructure code modules, S3 remote state, locking tables, and import plans.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-node completed">
+                            <span class="roadmap-num">8</span>
+                            <div class="roadmap-info">
+                                <h4>Ansible Config Management</h4>
+                                <p>Playbook templates, configuration management, and server provisioning.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-node completed">
+                            <span class="roadmap-num">9</span>
+                            <div class="roadmap-info">
+                                <h4>GitHub Actions CI/CD</h4>
+                                <p>Automated pipeline files, workflow templates, runners, and build caches.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-node completed">
+                            <span class="roadmap-num">10</span>
+                            <div class="roadmap-info">
+                                <h4>Monitoring & Logging</h4>
+                                <p>Prometheus scraper rules, Grafana dash alerts, and ELK stack integration.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-node active">
+                            <span class="roadmap-num">11</span>
+                            <div class="roadmap-info">
+                                <h4>DevSecOps Security Integrations</h4>
+                                <p>Automating SonarQube quality gates, Snyk dependency scans, and Trivy image reports.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Key Achievements -->
+                <div class="achievements-wrap reveal-right">
+                    <div class="section-header align-left">
+                        <span class="section-pre">Impact & Results</span>
+                        <h2 class="section-title">Key Achievements</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    
+                    <div class="achievements-list">
+                        <!-- Achievement 1 -->
+                        <div class="achievement-card">
+                            <div class="ach-icon"><i data-lucide="clock"></i></div>
+                            <div class="ach-content">
+                                <h3 class="ach-title">CI/CD Speed Automation</h3>
+                                <p class="ach-desc">Reduced code deployment intervals through GitHub Actions script and test caching, ensuring secure and prompt release cycles.</p>
+                            </div>
+                        </div>
+                        <!-- Achievement 2 -->
+                        <div class="achievement-card">
+                            <div class="ach-icon"><i data-lucide="code-2"></i></div>
+                            <div class="ach-content">
+                                <h3 class="ach-title">Infrastructure-as-Code Setup</h3>
+                                <p class="ach-desc">Converted legacy manual cloud resources into reusable Terraform modules, guaranteeing consistent dev and production environments.</p>
+                            </div>
+                        </div>
+                        <!-- Achievement 3 -->
+                        <div class="achievement-card">
+                            <div class="ach-icon"><i class="devicon-kubernetes-plain colored"></i></div>
+                            <div class="ach-content">
+                                <h3 class="ach-title">Kubernetes Scaling Integration</h3>
+                                <p class="ach-desc">Designed automated deployment charts for EKS applications using Helm, reducing configuration overhead by maintaining templates.</p>
+                            </div>
+                        </div>
+                        <!-- Achievement 4 -->
+                        <div class="achievement-card">
+                            <div class="ach-icon"><i data-lucide="shield-check"></i></div>
+                            <div class="ach-content">
+                                <h3 class="ach-title">DevSecOps Guardrails</h3>
+                                <p class="ach-desc">Configured automated static code checking (SonarQube) and security tests (Snyk/Trivy), catching vulnerabilities during PR validation.</p>
+                            </div>
+                        </div>
+                        <!-- Achievement 5 -->
+                        <div class="achievement-card">
+                            <div class="ach-icon"><i data-lucide="server"></i></div>
+                            <div class="ach-content">
+                                <h3 class="ach-title">Consistent Cloud Provisioning</h3>
+                                <p class="ach-desc">Deployed infrastructure configurations utilizing S3 Remote State storage backends to synchronize team resources, eliminating local file conflicts.</p>
+                            </div>
+                        </div>
+                        <!-- Achievement 6 -->
+                        <div class="achievement-card">
+                            <div class="ach-icon"><i data-lucide="settings"></i></div>
+                            <div class="ach-content">
+                                <h3 class="ach-title">Automated Cloud Provisioning</h3>
+                                <p class="ach-desc">Implemented shell script integrations and Ansible triggers to deploy patches across Linux environments with zero manual intervention.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section class="education-section section" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-pre">Qualifications</span>
+                <h2 class="section-title">Education & Certifications</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="edu-certs-grid">
+                <!-- Education Timeline -->
+                <div class="education-wrap reveal-left">
+                    <h3 class="sub-title"><i data-lucide="graduation-cap" class="title-icon"></i> Academic Background</h3>
+                    <div class="edu-timeline">
+                        <div class="edu-item">
+                            <div class="edu-dot"></div>
+                            <div class="edu-header">
+                                <h4 class="degree-title">Bachelor of Technology (B.Tech)</h4>
+                                <span class="edu-duration">Graduated: May 2023</span>
+                            </div>
+                            <p class="edu-inst">Annamayya University</p>
+                            <p class="edu-loc"><i data-lucide="map-pin"></i> Rajampet, Kadapa, Andhra Pradesh, India</p>
+                            <p class="edu-details">Specialized in engineering foundations, computing systems, networking protocols, database concepts, and operating systems.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certifications -->
+                <div class="certifications-wrap reveal-right">
+                    <h3 class="sub-title"><i data-lucide="award" class="title-icon"></i> Professional Certifications</h3>
+                    <div class="certs-grid">
+                        <!-- Cert 1 -->
+                        <div class="cert-card">
+                            <div class="cert-icon-wrap"><i class="devicon-amazonwebservices-plain colored"></i></div>
+                            <div class="cert-body">
+                                <h4>AWS Certified Solutions Architect – Associate</h4>
+                                <p class="cert-issuer">Amazon Web Services</p>
+                            </div>
+                        </div>
+                        <!-- Cert 2 -->
+                        <div class="cert-card">
+                            <div class="cert-icon-wrap"><i class="devicon-amazonwebservices-plain colored"></i></div>
+                            <div class="cert-body">
+                                <h4>AWS Certified Cloud Practitioner</h4>
+                                <p class="cert-issuer">Amazon Web Services</p>
+                            </div>
+                        </div>
+                        <!-- Cert 3 -->
+                        <div class="cert-card">
+                            <div class="cert-icon-wrap"><i class="devicon-terraform-plain colored"></i></div>
+                            <div class="cert-body">
+                                <h4>HashiCorp Certified: Terraform Associate</h4>
+                                <p class="cert-issuer">HashiCorp</p>
+                            </div>
+                        </div>
+                        <!-- Cert 4 -->
+                        <div class="cert-card">
+                            <div class="cert-icon-wrap"><i class="devicon-docker-plain colored"></i></div>
+                            <div class="cert-body">
+                                <h4>Docker Certified Associate</h4>
+                                <p class="cert-issuer">Docker Inc.</p>
+                            </div>
+                        </div>
+                        <!-- Cert 5 -->
+                        <div class="cert-card">
+                            <div class="cert-icon-wrap"><i class="devicon-kubernetes-plain colored"></i></div>
+                            <div class="cert-body">
+                                <h4>Certified Kubernetes Administrator (CKA)</h4>
+                                <p class="cert-issuer">Cloud Native Computing Foundation (CNCF)</p>
+                            </div>
+                        </div>
+                        <!-- Cert 6 -->
+                        <div class="cert-card">
+                            <div class="cert-icon-wrap"><i class="devicon-linux-plain colored"></i></div>
+                            <div class="cert-body">
+                                <h4>Linux Server System Administrator</h4>
+                                <p class="cert-issuer">Linux Foundation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Blog Section -->
+    <section class="blog-section section" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-pre">Tech Articles & Guides</span>
+                <h2 class="section-title">Technical Blog</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="blog-grid">
+                <!-- Blog Card 1 -->
+                <article class="blog-card reveal-up">
+                    <div class="blog-card-image">
+                        <div class="blog-placeholder-img grad-blue">
+                            <i class="devicon-docker-plain colored"></i>
+                        </div>
+                        <span class="blog-category">Docker</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-date">June 20, 2026</span>
+                        <h3 class="blog-title"><a href="#">Docker Containerization Best Practices</a></h3>
+                        <p class="blog-summary">An in-depth guide covering multi-stage builds, rootless execution, image size reduction techniques, and secure container runtimes.</p>
+                        <a href="#" class="blog-read-more">Read Article <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 2 -->
+                <article class="blog-card reveal-up" style="animation-delay: 0.1s;">
+                    <div class="blog-card-image">
+                        <div class="blog-placeholder-img grad-cyan">
+                            <i class="devicon-kubernetes-plain colored"></i>
+                        </div>
+                        <span class="blog-category">Kubernetes</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-date">May 14, 2026</span>
+                        <h3 class="blog-title"><a href="#">Kubernetes Production Deployment Strategies</a></h3>
+                        <p class="blog-summary">Exploring rolling updates, blue-green setups, canary releases, and ingress controllers to ensure zero-downtime application upgrades.</p>
+                        <a href="#" class="blog-read-more">Read Article <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 3 -->
+                <article class="blog-card reveal-up" style="animation-delay: 0.2s;">
+                    <div class="blog-card-image">
+                        <div class="blog-placeholder-img grad-purple">
+                            <i class="devicon-terraform-plain colored"></i>
+                        </div>
+                        <span class="blog-category">Terraform</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-date">April 08, 2026</span>
+                        <h3 class="blog-title"><a href="#">Writing Reusable Terraform Modules</a></h3>
+                        <p class="blog-summary">How to structure modular configurations, manage variables, handle remote states safely with DynamoDB locks, and handle outputs.</p>
+                        <a href="#" class="blog-read-more">Read Article <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 4 -->
+                <article class="blog-card reveal-up">
+                    <div class="blog-card-image">
+                        <div class="blog-placeholder-img grad-dark">
+                            <i class="devicon-amazonwebservices-plain colored"></i>
+                        </div>
+                        <span class="blog-category">AWS</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-date">March 22, 2026</span>
+                        <h3 class="blog-title"><a href="#">AWS EKS Administration Guide</a></h3>
+                        <p class="blog-summary">A step-by-step setup guide covering cluster networking, IAM-to-K8s account mappings, node autoscaling configurations, and S3 backups.</p>
+                        <a href="#" class="blog-read-more">Read Article <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 5 -->
+                <article class="blog-card reveal-up" style="animation-delay: 0.1s;">
+                    <div class="blog-card-image">
+                        <div class="blog-placeholder-img grad-blue">
+                            <i class="devicon-githubactions-plain colored"></i>
+                        </div>
+                        <span class="blog-category">CI/CD</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-date">February 11, 2026</span>
+                        <h3 class="blog-title"><a href="#">GitHub Actions Workflow Optimization</a></h3>
+                        <p class="blog-summary">Tips on reducing deployment build times, using runner caches, configuring matrix runs, and integrating automated notifications.</p>
+                        <a href="#" class="blog-read-more">Read Article <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 6 -->
+                <article class="blog-card reveal-up" style="animation-delay: 0.2s;">
+                    <div class="blog-card-image">
+                        <div class="blog-placeholder-img grad-cyan">
+                            <i data-lucide="shield-alert" class="blog-icon-mid"></i>
+                        </div>
+                        <span class="blog-category">DevSecOps</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-date">January 05, 2026</span>
+                        <h3 class="blog-title"><a href="#">Integrating Security into CI/CD Pipelines</a></h3>
+                        <p class="blog-summary">Automating static security reviews with SonarQube, running dependency checkups with Snyk, and scanning containers using Trivy.</p>
+                        <a href="#" class="blog-read-more">Read Article <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 7 -->
+                <article class="blog-card reveal-up">
+                    <div class="blog-card-image">
+                        <div class="blog-placeholder-img grad-purple">
+                            <i class="devicon-linux-plain colored"></i>
+                        </div>
+                        <span class="blog-category">Linux</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-date">December 18, 2025</span>
+                        <h3 class="blog-title"><a href="#">Essential Linux Administration Tools</a></h3>
+                        <p class="blog-summary">Must-know commands, package updates, systemd process management, network interfaces checkups, and cron automation routines.</p>
+                        <a href="#" class="blog-read-more">Read Article <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 8 -->
+                <article class="blog-card reveal-up" style="animation-delay: 0.1s;">
+                    <div class="blog-card-image">
+                        <div class="blog-placeholder-img grad-dark">
+                            <i data-lucide="git-merge" class="blog-icon-mid"></i>
+                        </div>
+                        <span class="blog-category">CI/CD Design</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-date">November 04, 2025</span>
+                        <h3 class="blog-title"><a href="#">Modern CI/CD Pipeline Design</a></h3>
+                        <p class="blog-summary">A high-level architectural view explaining pipelines as code, caching, build parameters, error recovery, and deploy gates.</p>
+                        <a href="#" class="blog-read-more">Read Article <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-pre">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Contact Details -->
+                <div class="contact-info-wrap reveal-left">
+                    <h3 class="sub-title">Contact Information</h3>
+                    <p class="contact-info-lead">Feel free to reach out for project collaborations, job opportunities, or general DevOps discussions.</p>
+                    
+                    <div class="contact-details-list">
+                        <div class="contact-detail-card">
+                            <div class="detail-icon"><i data-lucide="mail"></i></div>
+                            <div class="detail-content">
+                                <span>Email</span>
+                                <a href="mailto:Saivijay.kathala@gmail.com">Saivijay.kathala@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail-card">
+                            <div class="detail-icon"><i data-lucide="phone"></i></div>
+                            <div class="detail-content">
+                                <span>Phone</span>
+                                <a href="tel:+918790396069">+91 8790396069</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail-card">
+                            <div class="detail-icon"><i data-lucide="map-pin"></i></div>
+                            <div class="detail-content">
+                                <span>Location</span>
+                                <p>Andhra Pradesh, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail-card">
+                            <div class="detail-icon"><i data-lucide="linkedin"></i></div>
+                            <div class="detail-content">
+                                <span>LinkedIn</span>
+                                <a href="https://www.linkedin.com/in/sai-vijay-kathala" target="_blank" rel="noopener">linkedin.com/in/sai-vijay-kathala</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-resume-promo">
+                        <h4>Need a physical copy of my profile?</h4>
+                        <a href="Sai_Vijay_Resume.pdf" class="btn btn-outline" download>
+                            <i data-lucide="download"></i> Download Resume PDF
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form and Map -->
+                <div class="contact-forms-wrap reveal-right">
+                    <div class="glass-tabs">
+                        <button class="form-tab-btn active" data-tab="message">Send Message</button>
+                        <button class="form-tab-btn" data-tab="map">Location Map</button>
+                    </div>
+                    
+                    <!-- Message Form Panel -->
+                    <div class="contact-panel active" id="panel-message">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="Job Opportunity / Collab">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required rows="5" placeholder="Write your message here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i data-lucide="send"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Leaflet Map Panel -->
+                    <div class="contact-panel" id="panel-map">
+                        <div class="map-container-wrap">
+                            <div id="map-target"></div>
+                            <div class="map-overlay-info">
+                                <h4>Andhra Pradesh, India</h4>
+                                <p>Working Remotely / Open to Relocation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="#" class="logo">
+                    <span class="logo-accent">&lt;</span>SaiVijay<span class="logo-accent">.DevOps /&gt;</span>
+                </a>
+                <p class="footer-tagline">Building and scaling resilient, secure, and automated multi-cloud infrastructures.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4 class="footer-title font-mono">Navigation</h4>
+                <div class="footer-nav-grid">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#roadmap">Roadmap</a>
+                    <a href="#education">Education</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            
+            <div class="footer-socials">
+                <h4 class="footer-title font-mono">Connect</h4>
+                <div class="social-links-row">
+                    <a href="https://www.linkedin.com/in/sai-vijay-kathala" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="mailto:Saivijay.kathala@gmail.com" aria-label="Email">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2026 Sai Vijay. All Rights Reserved. Crafted for cloud scale.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- Toast Container for Contact Success -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Lucide Icons CDN JS -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Leaflet.js CDN JS for Map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Custom Application Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
